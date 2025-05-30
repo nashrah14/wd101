@@ -1,19 +1,110 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
-form {
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
     margin-bottom: 20px;
 }
 
-table {
-    width: 60%;
-    margin: auto;
-    border-collapse: collapse;
+.form-group {
+    margin-bottom: 15px;
 }
 
-th, td {
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"] {
+    width: calc(100% - 22px); /* Adjust for padding and border */
     padding: 10px;
-    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
+
+.form-group.terms {
+    display: flex;
+    align-items: center;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; /* Override default width for checkbox */
+}
+.terms-label {
+    font-weight: normal !important; /* Override bold label for checkbox */
+}
+
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.error-messages {
+    color: red;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #ffebeb;
+}
+
+.error-messages ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
